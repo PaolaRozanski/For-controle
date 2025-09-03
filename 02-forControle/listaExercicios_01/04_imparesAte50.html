@@ -6,11 +6,19 @@
     */
 
     //ENTRADA
-
+    let lista1 = []
+    let impares = []
 
     //PROCESSAMENTO
-
+    for (let i = 1; i <= 50; i++){
+        lista1.push(i)
+    }
+    for ( let a = 0; a < lista1.length; a++ ){
+        if(a % 2 === 1){
+            impares.push(a)
+        }
+    }
 
     //SAÍDA
-
+    alert(impares.join(", "))
 </script>

@@ -7,11 +7,26 @@
     */
 
     //ENTRADA
-
+    let listaNumeros = [];
+    let listaFinal = [];
     
     //PROCESSAMENTO
+    for (let i = 0; i < 5; i++) {
+        let numeros = Number(prompt(`Informe um número`));
+        while (isNaN(numeros)) {
+            alert(`Responda apenas com valores numéricos!`);
+            numeros = Number(prompt(`Informe um número`));
+        }
+        listaNumeros.push(numeros);
+        for(let i of listaNumeros){
+            if (i > listaFinal){
+                listaFinal.shift()
+                listaFinal.push(i)
+            }
+        }
+    }
 
     
     //SAÍDA
-
+    alert(`O maior número que você informou foi ${listaFinal.join(", ")} \n\n A lista completa é ${listaNumeros.join(", ")}`)
 </script>

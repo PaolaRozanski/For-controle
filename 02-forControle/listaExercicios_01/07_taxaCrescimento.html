@@ -6,11 +6,13 @@
     */
 
     //ENTRADA
-
-    
+    let inicial = 80000
+    let anos = 0 
     //PROCESSAMENTO
-
+    for(; inicial < 200000; anos++){
+        inicial = (inicial * 0.03) + inicial
+    }
     
     //SAÍDA
-
+    alert(`Para esse país que tem uma população de 80000 habitantes com uma taxa de cresimento de 3% ao ano precisa de ${anos} para chegar a 200000 habitantes.`)
 </script>

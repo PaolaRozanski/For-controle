@@ -30,7 +30,33 @@
         alert("Escreva usando somente valores numéricos!");
         quantidade = Number(prompt("Qual a quantidade de alunos votantes?"));
     }
+    let votos1 = 0;
+    let votos2 = 0;
+    let votos3 = 0;
 
+    for (let i = 1; i <= quantidade; i++) {
+        let voto = prompt(`Aluno ${i}, vote digitando o nome do candidato:\n- ${representante1}\n- ${representante2}\n- ${representante3}`).trim().toLowerCase();
+        while (voto !== representante1 && voto !== representante2 && voto !== representante3) {
+            alert("Voto inválido! Digite exatamente o nome de um dos candidatos.");
+            voto = prompt(`Aluno ${i}, vote digitando o nome do candidato:\n- ${representante1}\n- ${representante2}\n- ${representante3}`).trim().toLowerCase();
+        }
+        if (voto === representante1) votos1++;
+        else if (voto === representante2) votos2++;
+        else if (voto === representante3) votos3++;
+    }
+
+    //PROCESSAMENTO
+    let perc1 = ((votos1 / quantidade) * 100).toFixed(2);
+    let perc2 = ((votos2 / quantidade) * 100).toFixed(2);
+    let perc3 = ((votos3 / quantidade) * 100).toFixed(2);
+
+    //SAÍDA
+    alert(
+        `RESULTADO DA VOTAÇÃO:\n` +
+        `${representante1}: ${votos1} votos (${perc1}%)\n` +
+        `${representante2}: ${votos2} votos (${perc2}%)\n` +
+        `${representante3}: ${votos3} votos (${perc3}%)`
+    );
     //PROCESSAMENTO
 
 

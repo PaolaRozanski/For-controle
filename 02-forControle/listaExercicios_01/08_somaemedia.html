@@ -6,11 +6,20 @@
     */
 
     //ENTRADA
-
-
+    let numero = []
+    let soma = 0
+    let media = 0 
+    let i = 0
     //PROCESSAMENTO
-
-
+    for (; i < 5; i++) {
+        let numeros = Number(prompt(`Informe um número`));
+        while (isNaN(numeros)) {
+            alert(`Responda apenas com valores numéricos!`);
+            numeros = Number(prompt(`Informe um número`));
+        }numero.push(numeros);
+        soma = soma + numeros
+    }
+        media = soma / i
     //SAÍDA
-
+    alert(`A soma dos números ${numero.join(", ")} é ${soma} e a média é ${media}`)
 </script>

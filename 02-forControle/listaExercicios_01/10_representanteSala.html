@@ -8,7 +8,28 @@
     */
 
     //ENTRADA
+        let representante1 = prompt("Qual o nome do primeiro candidato?").trim().toLowerCase();
+    while (!isNaN(representante1)) {
+        alert("Escreva apenas usando letras!");
+        representante1 = prompt("Qual o nome do primeiro candidato?").trim().toLowerCase();
+    }
 
+    let representante2 = prompt("Qual o nome do segundo candidato?").trim().toLowerCase();
+    while (!isNaN(representante2)) {
+        alert("Escreva apenas usando letras!");
+        representante2 = prompt("Qual o nome do segundo candidato?").trim().toLowerCase();
+    }
+
+    let representante3 = prompt("Qual o nome do terceiro candidato?").trim().toLowerCase();
+    while (!isNaN(representante3)) {
+        alert("Escreva apenas usando letras!");
+        representante3 = prompt("Qual o nome do terceiro candidato?").trim().toLowerCase();
+    }
+    let quantidade = Number(prompt("Qual a quantidade de alunos votantes?"));
+    while (isNaN(quantidade)) {
+        alert("Escreva usando somente valores numéricos!");
+        quantidade = Number(prompt("Qual a quantidade de alunos votantes?"));
+    }
 
     //PROCESSAMENTO
 

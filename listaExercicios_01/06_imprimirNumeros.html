@@ -6,22 +6,22 @@
     */
 
     //ENTRADA
-    //parte I
+
     let listaFinal = [];
 
-    //parte II
+    
     let numeroInicial = Number(prompt("Informe um número inicial para começar sua lista de números inteiros e ímpares"));
     while (isNaN(numeroInicial)) {
         alert("Digite apenas números!");
         numeroInicial = Number(prompt("Informe um número inicial para começar sua lista de números inteiros e ímpares"));
     }
-    //parte III
+
     let numeroFinal = Number(prompt("Informe um número final para terminar sua lista de números inteiros e ímpares"));
     while (isNaN(numeroFinal)) {
         alert("Digite apenas números!");
         numeroFinal = Number(prompt("Informe um número final para terminar sua lista de números inteiros e ímpares"));
     }
-    //parte IV
+
     for (; numeroInicial >= numeroFinal;) {
         alert("ERRO!");
         alert("O número inicial deve ser menor que o número final!")

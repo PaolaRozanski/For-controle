@@ -8,7 +8,7 @@
     */
 
     //ENTRADA
-        let representante1 = prompt("Qual o nome do primeiro candidato?").trim().toLowerCase();
+    let representante1 = prompt("Qual o nome do primeiro candidato?").trim().toLowerCase();
     while (!isNaN(representante1)) {
         alert("Escreva apenas usando letras!");
         representante1 = prompt("Qual o nome do primeiro candidato?").trim().toLowerCase();
@@ -30,7 +30,7 @@
         alert("Escreva usando somente valores numéricos!");
         quantidade = Number(prompt("Qual a quantidade de alunos votantes?"));
     }
-     let final1 = 0;
+    let final1 = 0;
     let final2 = 0;
     let final3 = 0;
     //PROCESSAMENTO
@@ -40,7 +40,9 @@
             alert("Escreva apenas letras!");
             voto = prompt("Em quem deseja votar?").trim().toLowerCase();
         }
-
+        while (voto !== representante1 && voto !==representante2 && voto !== representante3) {
+            alert("Escolha entre os representantes listados, São eles:\n\n("+representante1+", "+representante2+" ou "+representante3+")");
+            let voto = prompt("Em quem deseja votar?").trim().toLowerCase();
         }
             if (voto === representante1) {
                 final1 +=1;
@@ -48,10 +50,9 @@
                 final2 +=1;
             } else {
                 final3 +=1;
-            }
+            }}
     //SAÍDA
-    alert(`O representante ${representante1} terá ${final1} votos`);
-    alert(`O representante ${representante2} terá ${final2} votos`);
-    alert(`O representante ${representante3} terá ${final3} votos`);
-
+    alert("O representante "+representante1+" terá " +final1+ " votos");
+    alert("O representante "+representante2+" terá " +final2+ " votos");
+    alert("O representante "+representante3+" terá " +final3+ " votos");
 </script>
